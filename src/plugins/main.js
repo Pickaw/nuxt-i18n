@@ -3,6 +3,7 @@ import VueI18n from 'vue-i18n'
 import Cookies from 'js-cookie'
 import cookie from 'cookie'
 
+import { nuxtI18nSeo } from './seo-head'
 
 Vue.use(VueI18n)
 
@@ -47,7 +48,7 @@ export default async ({ app, route, store, req, res }) => {
           state.messages = messages
         }
       }
-    })
+    }, { preserveState: vuex.preserveState })
   }
   <% } %>
 
@@ -60,6 +61,13 @@ export default async ({ app, route, store, req, res }) => {
   app.i18n.routesNameSeparator = '<%= options.routesNameSeparator %>'
   app.i18n.beforeLanguageSwitch = <%= options.beforeLanguageSwitch %>
   app.i18n.onLanguageSwitched = <%= options.onLanguageSwitched %>
+  // Extension of Vue
+  if (!app.$t) {
+    app.$t = app.i18n.t
+  }
+
+  // Inject seo function
+  Vue.prototype.$nuxtI18nSeo = nuxtI18nSeo
 
   if (store && store.state.localeDomains) {
     app.i18n.locales.forEach(locale => {

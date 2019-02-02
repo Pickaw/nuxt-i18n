@@ -55,7 +55,11 @@ Here are all the options available when configuring the module and their default
     // Set to false to redirect every time
     useCookie: true,
     // Cookie name
-    cookieKey: 'i18n_redirected'
+    cookieKey: 'i18n_redirected',
+    // Set to always redirect to value stored in the cookie, not just once
+    alwaysRedirect: false,
+    // If no locale for the browsers locale is a match, use this one as a fallback
+    fallbackLocale: null
   },
 
   // Set this to true if you're using different domains for each language
@@ -80,7 +84,7 @@ Here are all the options available when configuring the module and their default
   vuex: {
     // Module namespace
     moduleName: 'i18n',
-    
+
     // Mutations config
     mutations: {
       // Mutation to commit to store current locale, set to false to disable
@@ -88,7 +92,10 @@ Here are all the options available when configuring the module and their default
 
       // Mutation to commit to store current message, set to false to disable
       setMessages: 'I18N_SET_MESSAGES'
-    }
+    },
+
+    // PreserveState from server
+    preserveState: false
   },
 
   // By default, custom routes are extracted from page files using acorn parsing,
@@ -98,6 +105,12 @@ Here are all the options available when configuring the module and their default
   // If parsePages option is disabled, the module will look for custom routes in
   // the pages option, refer to the "Routing" section for usage
   pages: {},
+
+  // By default, custom paths will be encoded using encodeURI method.
+  // This does not work with regexp: "/foo/:slug-:id(\\d+)". If you want to use
+  // regexp in the path, then set this option to false, and make sure you process
+  // path encoding yourself.
+  encodePaths: true,
 
   // Called right before app's locale changes
   beforeLanguageSwitch: () => null,

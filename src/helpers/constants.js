@@ -33,7 +33,9 @@ exports.DEFAULT_OPTIONS = {
   rootRedirect: null,
   detectBrowserLanguage: {
     useCookie: true,
-    cookieKey: 'i18n_redirected'
+    cookieKey: 'i18n_redirected',
+    alwaysRedirect: '',
+    fallbackLocale: null
   },
   differentDomains: false,
   forwardedHost: false,
@@ -44,10 +46,12 @@ exports.DEFAULT_OPTIONS = {
     mutations: {
       setLocale: 'I18N_SET_LOCALE',
       setMessages: 'I18N_SET_MESSAGES'
-    }
+    },
+    preserveState: false
   },
   parsePages: true,
   pages: {},
+  encodePaths: true,
   beforeLanguageSwitch: () => null,
   onLanguageSwitched: () => null
 }

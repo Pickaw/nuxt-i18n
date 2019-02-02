@@ -1,4 +1,4 @@
-<h1 align="center" >nuxt-i18n</h1>
+<h1 align="center">nuxt-i18n</h1>
 <p align="center">i18n features for your Nuxt project</p>
 
 <p align="center">
@@ -29,7 +29,13 @@
 </a>
 </p>
 
-## Development
+<h2 align="center">Co-maintainers welcome!</h2>
+
+I've been lacking time to properly maintain the project lately and I would be really happy if anyone were interested in helping me maintaining **nuxt-i18n**! It looks like there are more and more projects using this module and we've had great contributions from the community. It's just getting hard to keep track of the issues and questions here and on CMTY so don't hesitate to get in touch if you're interested in taking a bigger part in the project!
+
+Feel free to email me at the address that's in [my profile](https://github.com/paulgv), or ping me on [Nuxt's Discord channel](https://discord.nuxtjs.org/) (**paulgv#1021**).
+
+## Contribute to the module
 
 - Fork the project and clone it in your existing Nuxt project:
 
@@ -100,7 +106,7 @@ yarn docs:dev
 
 ## Issues, questions & requests
 
-Please use [CMTY](https://cmty.app/nuxt/nuxt-i18n/issues) for any question you might have.
+Please use [CMTY](https://cmty.app/nuxt/nuxt-i18n/issues?type=question) for any question you might have.
 
 
 ## License

@@ -2,6 +2,125 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.8.0"></a>
+# [5.8.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.7.0...v5.8.0) (2019-01-27)
+
+
+### Bug Fixes
+
+* Rename option encodeURI to encodePaths ([776c2dd](https://github.com/nuxt-community/nuxt-i18n/commit/776c2dd))
+
+
+### Features
+
+* Add encodeURI option to allow skipping encodeURI for custom paths ([#199](https://github.com/nuxt-community/nuxt-i18n/issues/199)) ([00c89f1](https://github.com/nuxt-community/nuxt-i18n/commit/00c89f1)), closes [#191](https://github.com/nuxt-community/nuxt-i18n/issues/191)
+
+
+
+<a name="5.7.0"></a>
+# [5.7.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.6.0...v5.7.0) (2019-01-23)
+
+
+### Bug Fixes
+
+* Fix broken condition in middleware & prevent cookie from being set twice ([#164](https://github.com/nuxt-community/nuxt-i18n/issues/164)) ([7c83922](https://github.com/nuxt-community/nuxt-i18n/commit/7c83922))
+
+
+### Features
+
+* Upgrade vue-i18n (v8.2.1 -> v8.7.0) ([feac945](https://github.com/nuxt-community/nuxt-i18n/commit/feac945))
+
+
+
+<a name="5.6.0"></a>
+# [5.6.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.5.0...v5.6.0) (2019-01-20)
+
+
+### Bug Fixes
+
+* Create correct baseroute for switchlocalepath ([#193](https://github.com/nuxt-community/nuxt-i18n/issues/193)) ([909062f](https://github.com/nuxt-community/nuxt-i18n/commit/909062f))
+* Preserve route params in base route ([13b2e73](https://github.com/nuxt-community/nuxt-i18n/commit/13b2e73))
+
+
+### Features
+
+* Add canonical link to PREFIX_AND_DEFAULT duplicated pages ([#194](https://github.com/nuxt-community/nuxt-i18n/issues/194)) ([dcd1f79](https://github.com/nuxt-community/nuxt-i18n/commit/dcd1f79))
+
+
+
+<a name="5.5.0"></a>
+# [5.5.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.4.4...v5.5.0) (2019-01-14)
+
+
+### Bug Fixes
+
+* preserve queryString when redirecting to rootRedirect ([#169](https://github.com/nuxt-community/nuxt-i18n/issues/169)) ([1ddcac2](https://github.com/nuxt-community/nuxt-i18n/commit/1ddcac2))
+* Set i18n_redirect cookie path to '/' ([#143](https://github.com/nuxt-community/nuxt-i18n/issues/143)) ([9ad540e](https://github.com/nuxt-community/nuxt-i18n/commit/9ad540e))
+* State not defined ([#178](https://github.com/nuxt-community/nuxt-i18n/issues/178)) ([142dcb0](https://github.com/nuxt-community/nuxt-i18n/commit/142dcb0)), closes [#173](https://github.com/nuxt-community/nuxt-i18n/issues/173)
+* Update types ([#167](https://github.com/nuxt-community/nuxt-i18n/issues/167)) ([225e700](https://github.com/nuxt-community/nuxt-i18n/commit/225e700))
+* Wait for lazy loading promises ([#163](https://github.com/nuxt-community/nuxt-i18n/issues/163)) ([8b42631](https://github.com/nuxt-community/nuxt-i18n/commit/8b42631))
+
+
+### Features
+
+* Allow i18n component to load json ([#174](https://github.com/nuxt-community/nuxt-i18n/issues/174)) ([21d4305](https://github.com/nuxt-community/nuxt-i18n/commit/21d4305))
+* expose head SEO function to use in layout ([#154](https://github.com/nuxt-community/nuxt-i18n/issues/154)) ([ce373c4](https://github.com/nuxt-community/nuxt-i18n/commit/ce373c4))
+* make t() method available server-side through app.$t() ([#168](https://github.com/nuxt-community/nuxt-i18n/issues/168)) ([90bcd80](https://github.com/nuxt-community/nuxt-i18n/commit/90bcd80))
+* rework browser detection and save lang to cookie ([#148](https://github.com/nuxt-community/nuxt-i18n/issues/148)) ([d1bbc84](https://github.com/nuxt-community/nuxt-i18n/commit/d1bbc84))
+
+
+
+<a name="5.4.4"></a>
+## [5.4.4](https://github.com/nuxt-community/nuxt-i18n/compare/v5.4.3...v5.4.4) (2018-10-23)
+
+
+### Bug Fixes
+
+* encode custom paths ([#145](https://github.com/nuxt-community/nuxt-i18n/issues/145)) ([98c9945](https://github.com/nuxt-community/nuxt-i18n/commit/98c9945)), closes [#7](https://github.com/nuxt-community/nuxt-i18n/issues/7)
+
+
+
+<a name="5.4.3"></a>
+## [5.4.3](https://github.com/nuxt-community/nuxt-i18n/compare/v5.4.2...v5.4.3) (2018-10-12)
+
+
+### Bug Fixes
+
+* Fix acorn-walk dependency ([#138](https://github.com/nuxt-community/nuxt-i18n/issues/138)) ([19c9f96](https://github.com/nuxt-community/nuxt-i18n/commit/19c9f96)), closes [#137](https://github.com/nuxt-community/nuxt-i18n/issues/137)
+
+
+
+<a name="5.4.2"></a>
+## [5.4.2](https://github.com/nuxt-community/nuxt-i18n/compare/v5.4.1...v5.4.2) (2018-10-12)
+
+
+### Bug Fixes
+
+* Revert "feat: i18n.locale property changes when route changed" ([9e04b00](https://github.com/nuxt-community/nuxt-i18n/commit/9e04b00))
+
+
+
+<a name="5.4.1"></a>
+## [5.4.1](https://github.com/nuxt-community/nuxt-i18n/compare/v5.4.0...v5.4.1) (2018-10-11)
+
+
+### Bug Fixes
+
+* Include Types in NPM bundle (when published) ([fc67f4e](https://github.com/nuxt-community/nuxt-i18n/commit/fc67f4e))
+
+
+
+<a name="5.4.0"></a>
+# [5.4.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.3.0...v5.4.0) (2018-10-07)
+
+
+### Features
+
+* add TypeScript types ([#133](https://github.com/nuxt-community/nuxt-i18n/issues/133)) ([817c58e](https://github.com/nuxt-community/nuxt-i18n/commit/817c58e))
+* i18n.locale property changes when route changed ([2f2f284](https://github.com/nuxt-community/nuxt-i18n/commit/2f2f284))
+
+
+
 <a name="5.3.0"></a>
 # [5.3.0](https://github.com/nuxt-community/nuxt-i18n/compare/v5.2.1...v5.3.0) (2018-09-11)
 
