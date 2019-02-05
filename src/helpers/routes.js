@@ -55,7 +55,7 @@ exports.makeRoutes = (baseRoutes, {
     for (let i = 0, length1 = componentOptions.locales.length; i < length1; i++) {
       const locale = componentOptions.locales[i]
       let { name, path } = route
-      const localizedRoute = { ...route }
+      const localizedRoute = { ...route, name }
 
       // Skip if locale not in module's configuration
       if (locales.indexOf(locale) === -1) {
@@ -64,8 +64,11 @@ exports.makeRoutes = (baseRoutes, {
         continue
       }
 
-      // Make localized route name
-      localizedRoute.name = name + routesNameSeparator + locale
+      // Strategy NO_PREFIX implies that route are named without any suffix
+      if (strategy !== STRATEGIES.NO_PREFIX) {
+        // Make localized route name
+        localizedRoute.name = name + routesNameSeparator + locale
+      }
 
       // Generate localized children routes if any
       if (route.children) {
@@ -88,11 +91,18 @@ exports.makeRoutes = (baseRoutes, {
         // Only add prefix on top level routes
         !isChild &&
         // Skip default locale if strategy is PREFIX_EXCEPT_DEFAULT
-        !(locale === defaultLocale && strategy === STRATEGIES.PREFIX_EXCEPT_DEFAULT)
+        !(locale === defaultLocale && strategy === STRATEGIES.PREFIX_EXCEPT_DEFAULT) &&
+        // Don't add a prefix if strategy is NO_PREFIX
+        !(strategy === STRATEGIES.NO_PREFIX)
       )
 
       if (locale === defaultLocale && strategy === STRATEGIES.PREFIX_AND_DEFAULT) {
         routes.push({ ...localizedRoute, path })
+      }
+
+      // Skip non-default locales if strategy is NO_PREFIX
+      if (locale !== defaultLocale && strategy === STRATEGIES.NO_PREFIX) {
+        continue
       }
 
       if (shouldAddPrefix) {
