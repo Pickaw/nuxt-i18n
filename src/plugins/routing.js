@@ -16,7 +16,9 @@ function localePathFactory (i18nPath, routerPath) {
 
     // Build localized route options
     const routesNameSeparator = '<%= options.routesNameSeparator %>'
-    const name = route.name + routesNameSeparator + locale
+    const noPrefix = <%= options.strategy === options.STRATEGIES.NO_PREFIX %>
+    // NO_PREFIX strategy implies that routes are named without any suffix
+    const name = route.name + (noPrefix ? '' : routesNameSeparator + locale)
     const localizedRoute = Object.assign({}, route, { name })
 
     // Resolve localized route

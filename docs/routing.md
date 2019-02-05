@@ -1,6 +1,6 @@
 # Routing
 
-**nuxt-i18n** overrides Nuxt default routes to add locale prefixes to every URL.  
+**nuxt-i18n** overrides Nuxt default routes to add locale prefixes to every URL.
 Say your app supports two languages: French and English as the default language, and you have the following pages in your project:
 
 ```asciidoc
@@ -40,7 +40,11 @@ Note that routes for the English version do not have any prefix because it is th
 
 ## Strategy
 
-There are two supported strategies for generating the app's routes:
+There are four supported strategies for generating the app's routes:
+
+### no_prefix
+
+With this strategy, your routes won't have a locale prefix added. The locale will be detected & changed without changing the URL. This implies that you have to implement locale switches by calling the i18n API.
 
 ### prefix_except_default
 
@@ -54,7 +58,7 @@ With this strategy, all routes will have a locale prefix.
 
 This strategy combines both previous strategies behaviours, meaning that you will get URLs with prefixes for every language, but URLs for the default language will also have a non-prefixed version.
 
-To configure the strategy, use the `strategy` option. Make sure you have a `defaultLocale` defined if using **prefix_except_default**  or **prefix_and_default** strategy.
+To configure the strategy, use the `strategy` option. Make sure you have a `defaultLocale` defined if using **prefix_except_default**, **prefix_and_default** or **no_prefix** strategy.
 
 
 ```js
